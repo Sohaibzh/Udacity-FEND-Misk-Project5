@@ -22,7 +22,7 @@ Demonstrate the understating of using knockoutJS(MVVM) and Google Map API and Fo
 
 1. Clone/Download The Project
 2. run the Index.html.
-3. you can try the proejct [here](www.com)
+3. you can try the proejct [here](http://htmlpreview.github.io/?https://github.com/Sohaibzh/Udacity-FEND-Misk-Project5/blob/master/index.html)
 
 ### Resources
 
