@@ -1,16 +1,17 @@
- html, body {
+ html, 
+ body {
      font-family: Arial, sans-serif;
      height: 100%;
      margin: 0;
      padding: 0;
 }
- p{
-    display: inline;
-    text-align: center;
+ p {
+     display: inline;
+     text-align: center;
 }
  .big{
-    font-weight: bold;
-    margin-right: 2%
+     font-weight: bold;
+     margin-right: 2% 
 }
  .container {
      height: 100%;
@@ -25,7 +26,8 @@
      margin: 0 0 10px 0;
      text-align: center;
 }
- #hide-listings, #show-listings {
+ #hide-listings,
+ #show-listings {
      width: 48%;
 }
  #map {
@@ -45,10 +47,11 @@
      text-align: left;
      width: 340px;
 }
- #selectMarker{
+ #selectMarker {
      margin-left: 10%;
 }
- img{
+ img {
      margin-left: 30%;
      border-radius: 10px;
 }
+ 

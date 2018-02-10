@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="options-box">
-        <h3>Neighborhood Map</h3>
-        <button id='menuButton'>Menu</button>
-        <div id="menu">
-          <input id="show-listings" type="button" value="Show Markers">
-          <input id="hide-listings" type="button" value="Hide Markers">
-          <h5>Select From the Dropdown List:</h5>
-          <select id='selectMarker' multiple="multiple" height="5" data-bind="options:allItems, selectedOptions:selectedItems , click: showMarker"> </select>
-        </div>
+   <head>
+      <meta charset="utf-8">
+      <title>Neighborhood Map</title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+   </head>
+   <body>
+      <div class="container">
+         <div class="options-box">
+            <h3>Neighborhood Map</h3>
+            <button id='menuButton' data-bind="click: hideButtons">Menu</button>
+            <div id="menu" data-bind="visible: hideDiv , value:hideDiv">
+               <input id="show-listings" type="button" data-bind="click: showListings" value="Show Markers">
+               <input id="hide-listings" type="button" data-bind="click: hideListings" value="Hide Markers">
+               <h5>Select From the Dropdown List:</h5>
+               <select id='selectMarker' multiple="multiple" data-bind="options:allItems, selectedOptions:selectedItems , click: showMarker"> </select>
+               <label for="filter">Filter:</label>
+               <input id="filter" type="text" data-bind="textInput: filter"/>
+               <ul data-bind="foreach: visibleMarker">
+                  <li data-bind="text: title"></li>
+               </ul>
+            </div>
+         </div>
+         <div id="map"></div>
       </div>
-      <div id="map"></div>
-    </div>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvWHpKM2l9o2aLQaNDo3NHJJlC6KYWCsw&v=3&callback=initMap"> </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-
-    </script>
-
-  </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+      <script src="js/app.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvWHpKM2l9o2aLQaNDo3NHJJlC6KYWCsw&v=3&callback=initMap" onerror="googleMapError()"></script>
+      
+   </body>
 </html>
