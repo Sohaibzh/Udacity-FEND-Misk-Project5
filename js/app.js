@@ -409,7 +409,7 @@
   var googleMapError = function googleMapError(){
     alert("Pleace Reaferech the Page!!!");
 
-  }
+  };
 
 
   
