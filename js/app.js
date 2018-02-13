@@ -267,7 +267,7 @@ var viewModel = function() {
         }
 
       }
-      if (count === 0 && filet.length != 5) { // to call showMoreMarker only once
+      if (count === 0 && filet.length <= 5 && model.runCount !== 0) { // to call showMoreMarker only once
         count++;
 
         showMoreMarker(filet, 1);
